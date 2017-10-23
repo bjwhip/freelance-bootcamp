@@ -9,9 +9,11 @@
     <div class="card-block">
       <h3 class="card-title">{{ doc.title }}</h3>
 
-      <p class="card-text">{{ doc.description }}</p>
+        <p class="card-text">
+          <small class="text-muted">Last Updated: {{ doc.updated_at | date }}</small>
+        </p>
 
-      <p class="card-text"><small class="text-muted">{{ doc.updated_at }}</small></p>
+      <p class="card-text">{{ doc.description }}</p>
 
       <div>
           <a class="btn btn-lg btn-primary"href="{{ doc.file_url }}">Downloa File</a>
